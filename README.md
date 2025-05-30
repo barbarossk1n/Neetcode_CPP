@@ -12,22 +12,51 @@ Mastering these helps build a solid foundation for data manipulation and problem
 
 ### 📘 Key Concepts
 
-- **Arrays:**
-  * Fast random access: `O(1)`
-  * Insert/delete operations (except at the end): `O(n)`
-  * Commonly used structure: `std::vector`
+#### 🧱 Arrays (e.g., `std::vector`) 
+A dynamic array in C++ implemented via `std::vector`.
 
-- **Hash Tables (Maps & Sets):**
-  * Store key-value pairs for efficient lookups: `O(1)` average case
-  * C++ tools: `unordered_map`, `unordered_set`
-  * Useful for frequency counting, duplicate detection, etc.
+- **Features:**
+  * Random access in `O(1)` time
+  * Automatically resizes as elements are added/removed
+  * Efficient insertion/removal at the end: `O(1)` amortized
+  * Insertion/deletion in the middle: `O(n)`
  
-- **Common Techniques:**
-  * Frequency counters
-  * Two pointers
-  * Sorting + binary search
-  * Hash sets for uniqueness checking
+- **Common Operations:**
+  ```cpp
+  std::vector<int> nums = {1, 2, 3};
+  nums.push_back(4);              // <-- Add element
+  nums.pop_back();                // <-- Remove last element
+  nums.size();                    // <-- Get size
+  nums[i];                        // <-- Access element
+  for (int x : nums) { ... }      // <-- Range-based loop
+  ```
+
+- **When to use:**
+  * When frequent indexing or push_back is required.
  
+- **Useful links:**
+  * [cppreference - vector](https://en.cppreference.com/w/cpp/container/vector.html)
+
+#### 🧩 Hash Maps (e.g., std::unordered_map)
+A hash table that stores key-value pairs with fast average-case operations.
+
+- **Features:**
+  * Average `O(1)` time complexity for insertion, deletion, and lookup
+  * Stores unique keys mapped to values
+  * No guaranteed ordering of keys
+  * Collision resolution via chaining
+
+- **Common Operations:**
+ ``` cpp
+ std::unordered_map<char, int> freq;
+ freq['a']++;                    // <-- Increment frequency
+ if (freq.count('b')) { ... }   // <-- Check if key exists
+ freq.erase('c');               // <-- Remove key
+ for (auto& [key, val] : freq) {
+     std::cout << key << ": " << val << "\n";
+ }
+```
+  
 ---  
 
 ### 🔗 Problem List  
