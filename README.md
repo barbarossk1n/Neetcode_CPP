@@ -49,17 +49,17 @@ A hash table that stores key-value pairs with fast average-case operations.
   * Collision resolution via chaining
 
 - **Common Operations:**
- ``` cpp
- std::unordered_map<char, int> freq;
+  ``` cpp
+  std::unordered_map<char, int> freq;
 
- freq['a']++;                           // <-- Increment frequency
- if (freq.count('b')) { ... }           // <-- Check if key exists
- freq.erase('c');                       // <-- Remove key
+  freq['a']++;                           // <-- Increment frequency
+  if (freq.count('b')) { ... }           // <-- Check if key exists
+  freq.erase('c');                       // <-- Remove key
 
- for (auto& [key, val] : freq) {
-     std::cout << key << ": " << val << "\n";
- }
-```
+  for (auto& [key, val] : freq) {
+      std::cout << key << ": " << val << "\n";
+  }
+  ```
   
 ---  
 
