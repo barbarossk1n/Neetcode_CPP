@@ -37,7 +37,7 @@ A dynamic array in C++ implemented via `std::vector`.
   * When frequent indexing or push back is required.
  
 - **Useful links:**
-  * [cppreference - vector](https://en.cppreference.com/w/cpp/container/vector.html)
+  * [cppreference - std::vector](https://en.cppreference.com/w/cpp/container/vector.html)
 
 #### 🧩 Hash Maps (e.g., std::unordered_map)
 A hash table that stores key-value pairs with fast average-case operations.
@@ -60,10 +60,18 @@ A hash table that stores key-value pairs with fast average-case operations.
       std::cout << key << ": " << val << "\n";
   }
   ```
-  
+
+- **When to use:**
+  * When you need fast O(1) lookups, insertions, or deletions with key-value pairs and element ordering isn't important.
+ 
+- **Useful links:**
+  * [cppreference - std::unordered_map](https://en.cppreference.com/w/cpp/container/unordered_map.html)
+
 ---  
 
 ### 🔗 Problem List  
+
+- [**1. Contains Duplicate**]()
 
 ---  
 
